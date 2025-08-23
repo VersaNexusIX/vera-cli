@@ -65,7 +65,7 @@ vera-cli/
 
 ```bash
 pkg install python git
-git clone https://github.com/yourusername/vera-cli
+git clone https://github.com/VersaNexusIX/vera-cli.git
 cd vera-cli
 pip install -r requirements.txt
 python cli.py
