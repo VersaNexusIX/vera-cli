@@ -1,6 +1,6 @@
 <!-- Logo -->
 <p align="center">
-  <img src="img/copilot_image_1755776225162.jpeg" alt="VERA CLI Logo" width="200"/>
+  <img src="Img/copilot_image_1755776225162.jpeg" alt="Img/copilot_image_1755776225162.jpeg" width="200"/>
 </p>
 
 # VERA CLI v0.0.0
