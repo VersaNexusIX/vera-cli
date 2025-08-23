@@ -1,4 +1,4 @@
-# VERA CLI v0.0.3
+# VERA CLI v0.0.0
 
 A modular command-line interface for automation, media parsing, and multi-platform bot integration.  
 Developed by Versa NexusIX (David) — solo developer and systems architect.
@@ -51,8 +51,6 @@ vera-cli/
 │   └── parse_prompt.py
 ├── assets/
 │   └── help.txt
-├── config/
-│   └── telegram_token.py
 ├── requirements.txt
 └── README.md
 ```
