@@ -15,7 +15,6 @@ Developed by Versa NexusIX (David) — solo developer and systems architect.
 VERA CLI is a Python-based system designed for:
 
 - Media downloading (YouTube, TikTok, Pinterest)
-- Telegram bot integration
 - Flexible prompt parsing
 - WhatsApp profile scanning
 - ASCII generation
