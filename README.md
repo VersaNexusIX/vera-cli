@@ -1,6 +1,6 @@
 <!-- Logo -->
 <p align="center">
-  <img src="Img/copilot_image_1755776225162.jpeg" alt="Img/copilot_image_1755776225162.jpeg" width="200"/>
+  <img src="Img/Lucid_Origin_buatkan_saya_logo_dengan_nama_VERA_CLI_dan_berika_2.jpg" alt="Img/Lucid_Origin_buatkan_saya_logo_dengan_nama_VERA_CLI_dan_berika_2.jpg" width="200"/>
 </p>
 
 # VERA CLI v0.0.0
