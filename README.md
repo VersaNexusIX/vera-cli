@@ -47,11 +47,11 @@ vera-cli/
 │   ├── wa.py
 │   ├── weather.py
 │   ├── quiz.py
-│   └── vera.py
+│   └── ~~
 ├── utils/
 │   ├── ascii.py
 │   ├── anim.py
-│   └── parse_prompt.py
+│   └── ~~
 ├── assets/
 │   └── help.txt
 ├── requirements.txt
@@ -92,14 +92,12 @@ python cli.py
 ---
 ## Example command
 ```bash
-vera Hello, who are you?     # Chat with VERA
 yt https://youtu.be/...      # Download YouTube video
 tt https://vm.tiktok.com/... # Download TikTok video
 wa 6281234567890             # Scan WhatsApp profile image
 ascii Hello World            # Generate ASCII art
 cuaca Jakarta                # Get weather info
 quiz                         # Start quiz engine
-persona VERA                 # Set bot persona
 help                         # Show command list
 exit                         # Exit CLI
 ```
