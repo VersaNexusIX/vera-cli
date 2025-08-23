@@ -66,7 +66,7 @@ vera-cli/
 
 ```bash
 pkg install python git -y
-pip install requests colorama yt-dlp google-generativeai beautifulsoup4 pillow pyfiglet selenium
+pip install requests colorama yt-dlp beautifulsoup4 pillow pyfiglet selenium
 git clone https://github.com/VersaNexusIX/vera-cli.git
 termux-setup-storage
 y
