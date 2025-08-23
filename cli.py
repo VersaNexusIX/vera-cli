@@ -17,7 +17,6 @@ from handlers.tiktok        import handle as tiktok
 from handlers.yt            import handle as yt
 from handlers.spotify       import handle as spotify
 from handlers.cuaca         import handle as cuaca
-from handlers.vera          import handle as vera, set_persona
 from handlers.pinterest     import handle as pinterest
 from handlers.quiz          import handle as quiz
 from handlers.ig            import handle as ig
@@ -39,8 +38,7 @@ commands = {
     "sp":           spotify,
     "yt":           yt,
     "am":           allmedia,
-    "cuaca":        cuaca,
-    "vera":         vera,
+    "cuaca":        cuaca, 
     "git":          gitclone,
     "quiz":         quiz,
     "ig":           ig,
