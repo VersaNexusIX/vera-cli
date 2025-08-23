@@ -31,7 +31,6 @@ Each module is built for stable input parsing and final output without ambiguity
 - Prompt parser with auto-flatten logic (`utils/parse_prompt.py`)
 - Multi-format downloader (mp4, mp3, jpg)
 - WhatsApp profile scanner (`wa <number>`)
-- Telegram bot support (v20+)
 - Quiz engine and weather handler
 - Persona tuning for bot identity
 
