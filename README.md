@@ -76,6 +76,7 @@ pip install pillow
 pip install pyfiglet
 pip install selenium
 git clone https://github.com/VersaNexusIX/vera-cli.git
+termux-setup-storage
 cd vera-cli
 python cli.py
 ```
