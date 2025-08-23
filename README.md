@@ -3,7 +3,7 @@
   <img src="Img/Lucid_Origin_buatkan_saya_logo_dengan_nama_VERA_CLI_dan_berika_2.png" alt="Img/Lucid_Origin_buatkan_saya_logo_dengan_nama_VERA_CLI_dan_berika_2.png" width="200"/>
 </p>
 
-<h1>VERA CLI v0.0.0</h1>
+<h1 width="200">VERA CLI v0.0.0</h1>
 
 A modular command-line interface for automation, media parsing, and multi-platform bot integration.  
 Developed by Versa NexusIX (David) — solo developer and systems architect.
