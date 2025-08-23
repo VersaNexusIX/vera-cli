@@ -1,3 +1,8 @@
+<!-- Logo -->
+<p align="center">
+  <img src="img/copilot_image_1755776225162.jpeg" alt="VERA CLI Logo" width="200"/>
+</p>
+
 # VERA CLI v0.0.0
 
 A modular command-line interface for automation, media parsing, and multi-platform bot integration.  
