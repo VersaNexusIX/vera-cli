@@ -21,6 +21,11 @@ VERA CLI is a Python-based system designed for:
 - Weather, quiz, anime, and persona handlers
 
 Each module is built for stable input parsing and final output without ambiguity.
+---
+<p align="center">
+  <img src="Img/Screenshot_20250824-054902.jpg" alt="Img/Screenshot_20250824-054902.jpg" width="600"/>
+</p>
+
 
 ---
 
