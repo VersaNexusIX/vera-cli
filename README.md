@@ -62,7 +62,7 @@ vera-cli/
 
 ## 🛠️ Installation
 
-### Termux / Linux
+### Termux
 
 ```bash
 pkg install python git -y
