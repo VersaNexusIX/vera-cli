@@ -62,7 +62,7 @@ git clone https://github.com/yourusername/vera-cli
 cd vera-cli
 pip install -r requirements.txt
 python cli.py
-
+```
 
 ---
 ## Example command
@@ -72,9 +72,36 @@ yt https://youtu.be/...      # Download YouTube video
 tt https://vm.tiktok.com/... # Download TikTok video
 wa 6281234567890             # Scan WhatsApp profile image
 ascii Hello World            # Generate ASCII art
-weather Jakarta              # Get weather info
+cuaca Jakarta                # Get weather info
 quiz                         # Start quiz engine
 persona VERA                 # Set bot persona
 help                         # Show command list
 exit                         # Exit CLI
 
+---
+
+## 👤 About the Developer
+
+Versa NexusIX (David) is an independent software developer and systems architect based in Central Java, Indonesia. With deep expertise in low-level architecture, emotional AI systems, and cross-platform automation, he builds tools that prioritize stability, precision, and modular design.
+
+He specializes in:
+
+Assembly (ARM64/x86) and OS-level architecture
+
+Machine Learning Engineering with TensorFlow and anomaly detection
+
+CLI Design with branded ASCII output and flexible input parsing
+
+API Reverse Engineering and endpoint mapping for audit tools
+
+Cross-platform Bot Integration (Telegram, WhatsApp, SMS, Terminal)
+
+Web Scanning & Forensics for SQL/XLSX/admin panel extraction
+
+UX Logic & Emotional Systems for human-centered automation
+
+Still 14 years old
+
+David is also known for building VERA CLI, a modular command-line interface that integrates media parsing, bot communication, and emotional prompt handling. His work emphasizes clean code, final output logic, and universal compatibility across platforms.
+
+He actively shares certified learning resources in DevOps, C programming, and system design to support young developers and online communities. Every project is treated as a legacy artefact—documented, versioned, and built to endure.
