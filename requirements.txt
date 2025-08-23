@@ -1,0 +1,8 @@
+colorama
+requests
+yt-dlp
+google-generativeai
+beautifulsoup4
+pillow
+pyfiglet
+selenium
