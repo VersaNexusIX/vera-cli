@@ -67,9 +67,16 @@ vera-cli/
 
 ```bash
 pkg install python git
+pip install requests
+pip install colorama
+pip install yt-dlp
+pip install google-generativeai
+pip install beautifulsoup4
+pip install pillow
+pip install pyfiglet
+pip install selenium
 git clone https://github.com/VersaNexusIX/vera-cli.git
 cd vera-cli
-pip install -r requirements.txt
 python cli.py
 ```
 
