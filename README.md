@@ -34,21 +34,28 @@ Each module is built for stable input parsing and final output without ambiguity
 ---
 
 ## 📁 Folder Structure
-cli.py
-handlers/
-  ├── yt.py
-  ├── tt.py
-  ├── wa.py
-  ├── vera.py
-  ├── weather.py
-  ├── quiz.py
-  └── ...
-utils/
-  ├── ascii.py
-  ├── anim.py
-  ├── parse_prompt.py
-assets/
-  └── help.txt
+
+```bash
+vera-cli/
+├── cli.py
+├── handlers/
+│   ├── yt.py
+│   ├── tt.py
+│   ├── wa.py
+│   ├── weather.py
+│   ├── quiz.py
+│   └── vera.py
+├── utils/
+│   ├── ascii.py
+│   ├── anim.py
+│   └── parse_prompt.py
+├── assets/
+│   └── help.txt
+├── config/
+│   └── telegram_token.py
+├── requirements.txt
+└── README.md
+```
 
 ---
 
@@ -66,7 +73,7 @@ python cli.py
 
 ---
 ## Example command
-
+```bash
 vera Hello, who are you?     # Chat with VERA
 yt https://youtu.be/...      # Download YouTube video
 tt https://vm.tiktok.com/... # Download TikTok video
@@ -77,6 +84,7 @@ quiz                         # Start quiz engine
 persona VERA                 # Set bot persona
 help                         # Show command list
 exit                         # Exit CLI
+```
 
 ---
 
