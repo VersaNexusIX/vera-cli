@@ -17,7 +17,7 @@ def handle(args):
         video_tag = soup.find("video")
 
         if not video_tag or not video_tag.get("src"):
-            return Fore.RED + "VERA : ❌ Tidak menemukan video MP4."
+            return Fore.RED + "VERA : ❌ cannot found video MP4."
 
         m3u8_url = video_tag["src"]
         print(Fore.CYAN + "\nVERA : 🎥 Video found.")
