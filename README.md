@@ -79,19 +79,44 @@ python3 cli.py
 
 ### Termux
 
+_1_
 ```bash
 pkg update && pkg upgrade -y
 ```
-
+_2_
 ```bash
 pkg install python git -y
+```
+_3_
+```
 pkg install python3 -y
+```
+_4_
+```
 pip3 install beautifulsoup4 pillow pyfiglet selenium
+```
+_5_
+```
 git clone https://github.com/VersaNexusIX/vera-cli.git
+```
+_6_
+```
 pip3 install colorama requests yt-dlp
+```
+_7_
+```
 termux-setup-storage
+```
+_8_
+```
 y
+```
+_9_
+```
 cd vera-cli
+```
+_10_
+```
 python cli.py
 ```
 
