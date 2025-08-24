@@ -3,8 +3,6 @@ import requests
 from urllib.parse import urlparse
 
 def download_all_media(url, platform):
-    # Simulasi universal downloader
-    # Di real case, pakai API atau scraping engine
     filename = generate_filename(url, platform)
     ext = detect_extension(url)
 
