@@ -20,7 +20,7 @@ def download_webfiles(url, folder=None):
         r = requests.get(url, headers=HEADERS, timeout=15)
         soup = BeautifulSoup(r.text, "html.parser")
     except Exception as e:
-        print(f"❌ Gagal ambil HTML: {e}")
+        print(f"❌ failed to saved HTML: {e}")
         return
 
     domain = urlparse(url).netloc.replace("www.", "")
