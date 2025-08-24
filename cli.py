@@ -45,7 +45,7 @@ commands = {
     "fb":           fb,
     "x":            x,
     "pin":          pinterest,
-    "setpersona":   set_persona,
+    "setpersona":   botPersona,
     "ascii":        ascii_gen,
     "osint-mail":   osint_email,
     "anime":        anime,
