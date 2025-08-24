@@ -3,11 +3,9 @@ import subprocess
 import re
 from colorama import Fore, Style
 
-# === Path Resolver ===
 def get_download_path():
     return "/storage/emulated/0/Download"
 
-# === Filename Generator ===
 def get_next_filename(extension, prefix="VERA_", folder=None):
     folder = folder or get_download_path()
     os.makedirs(folder, exist_ok=True)
@@ -19,7 +17,6 @@ def get_next_filename(extension, prefix="VERA_", folder=None):
             return filename
         i += 1
 
-# === Media Scanner ===
 def trigger_media_scan(filepath):
     try:
         subprocess.run([
@@ -30,7 +27,6 @@ def trigger_media_scan(filepath):
     except Exception as e:
         print(Fore.RED + f"VERA : ❌ Gagal scan media: {e}" + Style.RESET_ALL)
 
-# === Public Mover ===
 def move_to_public_and_scan(local_path):
     target_path = os.path.join(get_download_path(), os.path.basename(local_path))
     try:
@@ -45,7 +41,6 @@ def move_to_public_and_scan(local_path):
         print(Fore.RED + f"VERA : ❌ Failed to move/scan: {e}" + Style.RESET_ALL)
         return local_path
 
-# === Extract Path from Result String (optional)
 def extract_path_from_result(result):
     match = re.search(r'Disimpan di: (.*)', result)
     return match.group(1).strip() if match else None
