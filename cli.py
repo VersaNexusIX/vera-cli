@@ -29,7 +29,6 @@ from handlers.anime         import handle as anime
 from handlers.tebak_angka   import handle as tebak_angka
 from handlers.webfile       import handle as webfile
 from handlers.web_grab      import handle as web_grab
-from handlers.wa            import handle as wa
 from handlers.git_search    import handle as git_search
 
 # Command registry
@@ -52,7 +51,6 @@ commands = {
     "guest_number":  tebak_angka,
     "webfile":      webfile,
     "webgrab":      web_grab,
-    "wa":           wa,
     "git_search":   git_search,
 }
 
