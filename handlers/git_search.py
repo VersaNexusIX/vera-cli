@@ -2,7 +2,7 @@ import requests
 
 def handle(args):
     if not args:
-        return "⚠️ Gunakan: git search <keyword>"
+        return "⚠️ try: git_search <keyword>"
 
     keyword = " ".join(args)
     url = f"https://api.github.com/search/repositories?q={keyword}&sort=stars&order=desc&per_page=5"
@@ -14,9 +14,9 @@ def handle(args):
 
         data = r.json().get("items", [])
         if not data:
-            return f"🤔 Tidak ada repository untuk '{keyword}'"
+            return f"🤔 There is no repository for '{keyword}'"
 
-        out = [f"🔍 Hasil pencarian '{keyword}':\n"]
+        out = [f"🔍 Search results '{keyword}':\n"]
         for repo in data:
             out.append(
                 f"📦 {repo['full_name']}\n"
