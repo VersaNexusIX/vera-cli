@@ -49,7 +49,7 @@ commands = {
     "ascii":        ascii_gen,
     "osint-mail":   osint_email,
     "anime":        anime,
-    "tebak_angka":  tebak_angka,
+    "guest_number":  tebak_angka,
     "webfile":      webfile,
     "webgrab":      web_grab,
     "wa":           wa,
