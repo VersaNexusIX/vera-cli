@@ -83,6 +83,8 @@ python3 cli.py
 pkg update && pkg upgrade -y
 pkg install python git -y
 pip3 install beautifulsoup4 pillow pyfiglet selenium colorama requests yt-dlp
+python3 -m pip install --upgrade pip
+python3 -m pip install beautifulsoup4
 git clone https://github.com/VersaNexusIX/vera-cli.git
 termux-setup-storage
 cd vera-cli
