@@ -82,21 +82,7 @@ python3 cli.py
 ### Termux
 
 ```
-pkg update && pkg upgrade -y
-pkg install python git -y
-python3 -m pip install --upgrade pip setuptools wheel
-pip3 install beautifulsoup4 pillow pyfiglet colorama requests yt-dlp lxml rich
-git clone https://github.com/VersaNexusIX/vera-cli.git
-termux-setup-storage
-cd vera-cli
-echo "beautifulsoup4
-pillow
-colorama
-requests
-yt-dlp
-lxml
-rich" > requirements.txt
-pip3 install -r requirements.txt
+bash install.sh
 python3 cli.py
 ```
 
