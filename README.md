@@ -21,13 +21,17 @@ VERA CLI is a Python-based system designed for:
 
 Each module is built for stable input parsing and final output without ambiguity.
 
+
 ---
+
+
 <p align="center">
   <img src="Img/Screenshot_20250824-054902.jpg" alt="Img/Screenshot_20250824-054902.jpg" width="600"/>
 </p>
 
 
 ---
+
 
 ## ⚙️ Features
 
@@ -62,6 +66,7 @@ vera-cli/
 
 
 ---
+
 
 🛠️ Installation
 
@@ -101,6 +106,7 @@ python3 cli.py
 
 ---
 
+
 Example command
 
 yt https://youtu.be/...      # Download YouTube video
@@ -113,6 +119,7 @@ exit                         # Exit CLI
 
 
 ---
+
 
 👤 About the Developer
 
@@ -137,5 +144,6 @@ UX Logic & Emotional Systems for human-centered automation
 David is also known for building VERA CLI, a modular command-line interface that integrates media parsing, bot communication, and emotional prompt handling. His work emphasizes clean code, final output logic, and universal compatibility across platforms.
 
 He actively shares certified learning resources in DevOps, C programming, and system design to support young developers and online communities. Every project is treated as a legacy artefact—documented, versioned, and built to endure.
+
 
 ---
