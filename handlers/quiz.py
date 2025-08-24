@@ -9,7 +9,6 @@ def fetch_brilio_riddle():
         soup = BeautifulSoup(r.text, "html.parser")
         raw = soup.get_text(separator="\n")
 
-        # Ambil baris yang mengandung pola soal
         lines = [line.strip() for line in raw.split("\n") if line.strip()]
         riddles = []
         for i in range(len(lines)):
@@ -20,16 +19,15 @@ def fetch_brilio_riddle():
                     riddles.append((q, a))
 
         if not riddles:
-            return "⚠️ Gagal parsing soal dari Brilio. Gunakan soal lokal."
+            return "⚠️ Failed to connect to brilio"
 
         question, answer = random.choice(riddles)
         print(f"[Teka-Teki Online] {question}")
         user = input("Jawaban: ")
-        return "✅ Benar." if user.strip().lower() == answer.lower() else f"❌ Salah. Jawaban: {answer}"
+        return "✅ correct." if user.strip().lower() == answer.lower() else f"❌ incorrect. Answer: {answer}"
     except Exception as e:
         return f"❌ Error ambil soal online: {str(e)}"
 
-# === CLI Handler ===
 def handle(args):
     if not args:
         return "⚠️ Format: quiz <online>"
@@ -37,4 +35,4 @@ def handle(args):
     if mode == "online":
         return fetch_brilio_riddle()
     else:
-        return "⚠️ Mode quiz tidak dikenali. Gunakan 'online'."
+        return "⚠️ Quiz mode not found. try 'online'."
