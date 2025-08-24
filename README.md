@@ -80,6 +80,7 @@ python3 cli.py
 ### Termux
 
 ```bash
+pkg update && pkg upgrade -y
 pkg install python git -y
 pip beautifulsoup4 pillow pyfiglet selenium
 git clone https://github.com/VersaNexusIX/vera-cli.git
