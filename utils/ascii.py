@@ -1,7 +1,7 @@
 from colorama import Fore, Style, init as colorama_init
 
 def show_ascii_banner():
-    colorama_init(autoreset=True
+    colorama_init(autoreset=True) 
 
     print(Fore.BLUE + r"""
 ╔╗──╔╦═══╦═══╦═══╗
