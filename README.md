@@ -92,7 +92,7 @@ python3 cli.py
 ### Run after Exit
 ```bash
 cd vera-cli
-python cli.py
+python3 cli.py
 ```
 
 ---
