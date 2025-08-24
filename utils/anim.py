@@ -11,7 +11,7 @@ def loading_anim(text="Loading..."):
     print(Style.RESET_ALL)
 
 def exit_anim(username):
-    print(Fore.CYAN + f"\n👋 Bye {username}! VERA CLI selesai.")
+    print(Fore.CYAN + f"\n👋 Bye {username}!")
     print(Fore.MAGENTA + """
 █░█ █▀ █▀▀▄ ▄▀▄
 █░█ █▀ █▐█▀ █▀█
