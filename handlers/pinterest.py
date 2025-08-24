@@ -5,7 +5,7 @@ from utils.vera_utils import get_next_filename, trigger_media_scan, move_to_publ
 
 def handle(args):
     if not args:
-        return Fore.YELLOW + "VERA : ⚠️ Masukkan link Pinterest."
+        return Fore.YELLOW + "VERA : ⚠️ empty link."
 
     url = args[0]
     visible = "--visible" in args
@@ -20,22 +20,22 @@ def handle(args):
             return Fore.RED + "VERA : ❌ Tidak menemukan video MP4."
 
         m3u8_url = video_tag["src"]
-        print(Fore.CYAN + "\nVERA : 🎥 Video ditemukan.")
+        print(Fore.CYAN + "\nVERA : 🎥 Video found.")
         print("VERA : 🔗 URL:", m3u8_url)
-        print("VERA : ❓ Lanjutkan unduh?")
+        print("VERA : ❓ continue ?")
         print("   [1] Lanjut")
         print("   [2] Batal\n")
 
-        choice = input(Fore.YELLOW + "VERA : Pilihanmu (1/2) ➤ ").strip()
+        choice = input(Fore.YELLOW + "VERA : Choose (1/2) ➤ ").strip()
         if choice != "1":
-            return Fore.MAGENTA + "VERA : 🚫 Unduhan dibatalkan."
+            return Fore.MAGENTA + "VERA : Cancelled by user."
 
         res = requests.get(m3u8_url, headers=headers)
         lines = res.text.splitlines()
         segment_urls = [line for line in lines if line and not line.startswith("#")]
 
         if not segment_urls:
-            return Fore.RED + "VERA : ❌ Tidak menemukan segmen video."
+            return Fore.RED + "VERA : ❌ cannot found video segment."
 
         base_url = m3u8_url.rsplit("/", 1)[0]
         download_dir = os.path.expanduser("~/Download/VERA_Pinterest")
@@ -77,6 +77,6 @@ def handle(args):
             try: os.remove(os.path.join(download_dir, path))
             except: pass
 
-        return Fore.GREEN + f"VERA : ✅ Video berhasil digabung ke: {final_path}"
+        return Fore.GREEN + f"VERA : ✅ File successfully merged to: {final_path}"
     except Exception as e:
-        return Fore.RED + f"VERA : ❌ Gagal proses fallback: {str(e)}"
+        return Fore.RED + f"VERA : ❌ Failed to process fallback: {str(e)}"
