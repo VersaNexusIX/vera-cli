@@ -3,7 +3,7 @@
   <img src="Img/vera_versa.png" alt="vera-cli logo" width="200"/>
 </p>
 
-<h1 align="center">VERA CLI v0.0.0</h1>
+<h2 align="center">VERA CLI v0.0.0</h2>
 
 A modular command-line interface for automation, media parsing, and multi-platform bot integration.  
 Developed by Versa NexusIX (David) — solo developer and systems architect.
