@@ -61,14 +61,14 @@ def move_to_public_and_scan(local_path, branded_name):
     try:
         os.rename(local_path, public_path)
         trigger_media_scan(public_path)
-        print(Fore.GREEN + f"VERA : ✅ File dipindah ke: {public_path}")
-        print("VERA : 📂 File sekarang bisa diakses dari File Manager dan Galeri." + Style.RESET_ALL)
+        print(Fore.GREEN + f"VERA : ✅ File moved to: {public_path}")
+        print("VERA : 📂 The file is now accessible." + Style.RESET_ALL)
     except Exception as e:
         print(Fore.RED + f"VERA : ❌ Gagal pindah/scan: {str(e)}" + Style.RESET_ALL)
 
 # === Format Prompt ===
 def prompt_format(url):
-    print(Fore.YELLOW + "VERA : Pilih format unduhan:" + Style.RESET_ALL)
+    print(Fore.YELLOW + "VERA : choose the format" + Style.RESET_ALL)
     if "/music/" in url:
         print("  1. 🎧 Audio (.mp3) [Indihome Style]")
         return "mp3"
@@ -115,22 +115,21 @@ def download_slide_images(url):
         image_urls = list(set(image_urls))[:10]
 
         if not image_urls:
-            return Fore.RED + "VERA : Tidak ditemukan gambar slide." + Style.RESET_ALL
+            return Fore.RED + "VERA : cannot found" + Style.RESET_ALL
 
         for i, img_url in enumerate(image_urls, start=1):
             ext = img_url.split('.')[-1].split('?')[0]
             filepath = get_next_filename(ext, i)
-            print(Fore.CYAN + f"VERA : Mengunduh slide {i}: {filepath}" + Style.RESET_ALL)
+            print(Fore.CYAN + f"VERA : installing slide {i}: {filepath}" + Style.RESET_ALL)
             with open(filepath, 'wb') as f:
                 f.write(requests.get(img_url).content)
             trigger_media_scan(filepath)
 
-        return Fore.GREEN + f"VERA : {len(image_urls)} gambar slide disimpan di folder Download." + Style.RESET_ALL
+        return Fore.GREEN + f"VERA : {len(image_urls)} Image saved to downloads folder." + Style.RESET_ALL
 
     except Exception as e:
-        return Fore.RED + f"VERA : Gagal unduh slide: {str(e)}" + Style.RESET_ALL
+        return Fore.RED + f"VERA : Download failed: {str(e)}" + Style.RESET_ALL
 
-# === yt-dlp Downloader ===
 def yt_dlp_download(url, format_choice):
     if format_choice in ["jpg", "slide"] and is_photo_post(url):
         return download_slide_images(url)
@@ -145,23 +144,23 @@ def yt_dlp_download(url, format_choice):
     elif format_choice == "jpg":
         ytdlp_args += ["--skip-download", "--write-thumbnail"]
     else:
-        return Fore.RED + "VERA : Format tidak dikenali." + Style.RESET_ALL
+        return Fore.RED + "VERA : Unrecognized format" + Style.RESET_ALL
 
     ytdlp_args.append(url)
 
-    print(Fore.CYAN + f"VERA : Mengunduh sebagai {format_choice.upper()} ke: {filename}" + Style.RESET_ALL)
+    print(Fore.CYAN + f"VERA : intalling {format_choice.upper()} ke: {filename}" + Style.RESET_ALL)
 
     try:
         subprocess.run(ytdlp_args, check=True)
         trigger_media_scan(filename)
-        return Fore.GREEN + f"VERA : Disimpan di: {filename}" + Style.RESET_ALL, filename
+        return Fore.GREEN + f"VERA : saved to: {filename}" + Style.RESET_ALL, filename
     except subprocess.CalledProcessError as e:
-        return Fore.RED + f"VERA : yt-dlp gagal unduh: {str(e)}" + Style.RESET_ALL, None
+        return Fore.RED + f"VERA : failed: {str(e)}" + Style.RESET_ALL, None
 
 # === Main Handler ===
 def handle(args):
     if not args:
-        return Fore.YELLOW + "VERA : URL TikTok belum diberikan." + Style.RESET_ALL
+        return Fore.YELLOW + "VERA : URL not yet provided." + Style.RESET_ALL
 
     original_url = args[0]
     visible = "--visible" in args
