@@ -82,6 +82,8 @@ python3 cli.py
 ### Termux
 
 ```
+pkg install git -y
+git clone https://github.com/VersaNexusIX/vera-cli.git
 bash install.sh
 python3 cli.py
 ```
