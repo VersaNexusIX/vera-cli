@@ -1,9 +1,9 @@
 <!-- Logo -->
 <p align="center">
-  <img src="Img/vera_versa.png" alt="Img/vera_versa.png" width="200"/>
+  <img src="Img/vera_versa.png" alt="vera-cli logo" width="200"/>
 </p>
 
-<h1 width="200">VERA CLI v0.0.0</h1>
+<h1 align="center">VERA CLI v0.0.0</h1>
 
 A modular command-line interface for automation, media parsing, and multi-platform bot integration.  
 Developed by Versa NexusIX (David) — solo developer and systems architect.
@@ -79,45 +79,14 @@ python3 cli.py
 
 ### Termux
 
-_1_
 ```bash
 pkg update && pkg upgrade -y
-```
-_2_
-```bash
 pkg install python git -y
-```
-_3_
-```
-pkg install python3 -y
-```
-_4_
-```
-pip3 install beautifulsoup4 pillow pyfiglet selenium
-```
-_5_
-```
+pip3 install beautifulsoup4 pillow pyfiglet selenium colorama requests yt-dlp
 git clone https://github.com/VersaNexusIX/vera-cli.git
-```
-_6_
-```
-pip3 install colorama requests yt-dlp
-```
-_7_
-```
 termux-setup-storage
-```
-_8_
-```
-y
-```
-_9_
-```
 cd vera-cli
-```
-_10_
-```
-python cli.py
+python3 cli.py
 ```
 
 ### Run after Exit
