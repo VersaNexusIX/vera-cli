@@ -4,12 +4,12 @@ from colorama import Fore, Style
 
 def handle(args):
     if not args:
-        return Fore.YELLOW + "⚠️ Link Instagram kosong." + Style.RESET_ALL
+        return Fore.YELLOW + "⚠️ Empty link." + Style.RESET_ALL
 
     url = args[0]
     choice = ask_format()
     if choice == "4":
-        return Fore.CYAN + "❎ Dibatalkan oleh pengguna." + Style.RESET_ALL
+        return Fore.CYAN + "❎ Cancelled by user." + Style.RESET_ALL
 
     ext = get_ext(choice)
     filename = get_next_filename(ext, prefix="IG_")
@@ -22,10 +22,10 @@ def handle(args):
                 f.write(chunk)
 
         final_path = move_to_public_and_scan(filename)
-        return Fore.GREEN + f"✅ IG: Disimpan di: {final_path}" + Style.RESET_ALL
+        return Fore.GREEN + f"✅ IG: saved to: {final_path}" + Style.RESET_ALL
 
     except Exception as e:
-        return Fore.RED + f"❌ Gagal unduh IG: {e}" + Style.RESET_ALL
+        return Fore.RED + f"❌ Failed saved IG: {e}" + Style.RESET_ALL
 
 def ask_format():
     print(Fore.CYAN + "\nPilih format unduhan:")
