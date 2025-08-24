@@ -13,7 +13,7 @@ def handle(args):
         ascii_art = fig.renderText(text)
         return Fore.CYAN + ascii_art + Style.RESET_ALL
     except Exception as e:
-        return Fore.RED + f"❌ Gagal generate ASCII: {e}" + Style.RESET_ALL
+        return Fore.RED + f"❌ Failed to enerate ASCII: {e}" + Style.RESET_ALL
 
 def ask_font():
     print(Fore.CYAN + "\nPilih font:")
