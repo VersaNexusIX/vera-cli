@@ -1,11 +1,11 @@
 import requests
 from colorama import Fore, Style
 
-API_KEY = "dd9d95480dea801e258ba226c7fdbc0d"  # Ganti dengan API dari https://openweathermap.org/api
+API_KEY = "dd9d95480dea801e258ba226c7fdbc0d"
 
 def handle(args):
     if not args:
-        return Fore.RED + "VERA : ⚠️ Format salah. Gunakan: cuaca <nama kota>" + Style.RESET_ALL
+        return Fore.RED + "VERA : ⚠️ Incorrect format. try: weather <city>" + Style.RESET_ALL
 
     kota = " ".join(args)
     url = f"http://api.openweathermap.org/data/2.5/weather?q={kota}&appid={API_KEY}&units=metric&lang=id"
@@ -15,7 +15,7 @@ def handle(args):
         data = res.json()
 
         if data.get("cod") != 200:
-            return Fore.RED + f"VERA : ❌ Kota '{kota}' tidak ditemukan." + Style.RESET_ALL
+            return Fore.RED + f"VERA : ❌ city '{kota}' Not found." + Style.RESET_ALL
 
         nama_kota = data["name"]
         suhu = data["main"]["temp"]
@@ -26,15 +26,14 @@ def handle(args):
         awan = data["clouds"]["all"]
 
         return Fore.CYAN + f"""
-VERA : 🌤️ Cuaca Saat Ini di {nama_kota}
+VERA : 🌤️ The current weather in {nama_kota}
 
-  Suhu            : {suhu}°C (Terasa seperti {feels_like}°C)
-  Kondisi         : {kondisi}
-  Kelembapan      : {kelembapan}%
-  Angin           : {angin} km/j
-  Tutupan Awan    : {awan}%
+  Temperature     : {suhu}°C (Terasa seperti {feels_like}°C)
+  Condition       : {kondisi}
+  Humidity        : {kelembapan}%
+  Wind            : {angin} km/j
+  cloud           : {awan}%
 
-Sumber: OpenWeatherMap
 """ + Style.RESET_ALL
 
     except Exception as e:
