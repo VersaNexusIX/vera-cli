@@ -82,7 +82,7 @@ python3 cli.py
 ```bash
 pkg update && pkg upgrade -y
 pkg install python git -y
-pip beautifulsoup4 pillow pyfiglet selenium
+pip3 install beautifulsoup4 pillow pyfiglet selenium
 git clone https://github.com/VersaNexusIX/vera-cli.git
 pip install colorama request yt-dlp
 termux-setup-storage
