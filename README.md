@@ -1,6 +1,6 @@
 <!-- Logo -->
 <p align="center">
-  <img src="Img/Lucid_Origin_buatkan_saya_logo_dengan_nama_VERA_CLI_dan_berika_2.png" alt="Img/Lucid_Origin_buatkan_saya_logo_dengan_nama_VERA_CLI_dan_berika_2.png" width="200"/>
+  <img src="Img/vera_versa.png" alt="Img/vera_versa.png" width="200"/>
 </p>
 
 <h1 width="200">VERA CLI v0.0.0</h1>
