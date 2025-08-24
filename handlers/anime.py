@@ -3,7 +3,7 @@ from textwrap import shorten
 
 def handle(args):
     if not args:
-        return "⚠️ Masukkan judul anime. Contoh: anime-info Naruto"
+        return "⚠️ Enter the anime title. example: anime Naruto"
 
     query = " ".join(args)
     url = f"https://api.jikan.moe/v4/anime?q={query}&limit=1"
@@ -13,7 +13,7 @@ def handle(args):
         data = res.json()
 
         if "data" not in data or len(data["data"]) == 0:
-            return f"❌ Anime '{query}' tidak ditemukan."
+            return f"❌ Anime '{query}' cannot found "
 
         anime = data["data"][0]
 
@@ -30,8 +30,8 @@ def handle(args):
         # Format tabel
         table = f"""
 ╭───────────────────────────────
-│ 📺 Judul     : {title}
-│ 🎬 Episode   : {episodes}
+│ 📺 title     : {title}
+│ 🎬 Episodes  : {episodes}
 │ ⭐ Rating    : {score}
 │ 📡 Status    : {status}
 │ 📝 Sinopsis  : {synopsis_short}
