@@ -8,8 +8,6 @@ import re
 from urllib.parse import urljoin, urlparse
 from bs4 import BeautifulSoup
 
-# ── Config ────────────────────────────────────────────────────────────────────
-
 DOWNLOAD_ROOT      = "/sdcard/Download"
 USER_AGENT         = "Mozilla/5.0 (grab-engine/vera)"
 MAX_PAGES          = 100
@@ -20,8 +18,6 @@ COMMON_ADMIN_PATHS = [
 ]
 WP_JSON_PATHS      = ["/wp-json/", "/wp-json/wp/v2/posts"]
 TLD_LIST           = [".com", ".net", ".org", ".id"]
-
-# ── Pronounceable Domain Generator ────────────────────────────────────────────
 
 VOWELS     = "aeiou"
 CONSONANTS = "".join(set(string.ascii_lowercase) - set(VOWELS))
@@ -44,8 +40,6 @@ def is_domain_resolvable(domain):
         return True
     except socket.gaierror:
         return False
-
-# ── Link Extraction & Analysis ────────────────────────────────────────────────
 
 def extract_links(html, base_url):
     soup, links = BeautifulSoup(html or "", "html.parser"), set()
@@ -73,7 +67,6 @@ def analyze_links(links):
             admins.add(link)
     return sqls, xlsxs, admins, jsons, phps
 
-# ── Crawlers & Scanners ────────────────────────────────────────────────────────
 
 def random_crawl(start_url):
     domain    = urlparse(start_url).netloc
@@ -122,7 +115,6 @@ def scan_open_ports(host):
             pass
     return open_ports
 
-# ── Nmap-like Port Scanner ────────────────────────────────────────────────
 
 def nmap_like_scan(host, ports=range(1, 101)):
     """
@@ -172,7 +164,6 @@ def nmap_like_scan(host, ports=range(1, 101)):
 
     return results, possible_admins
 
-# ── Hydra-like Brute Force ────────────────────────────────────────────────
 
 def hydra_like_attack(url, usernames=None, passwords=None,
                       method="post", user_field="username", pass_field="password"):
@@ -187,7 +178,6 @@ def hydra_like_attack(url, usernames=None, passwords=None,
     print(f"\n🔐 Hydra-like brute force on {url} ...")
     print(f"   Users={len(usernames)}, Passwords={len(passwords)}")
 
-    # baseline halaman login
     try:
         baseline = requests.get(url, headers=headers, timeout=5).text
         baseline_len = len(baseline)
@@ -220,8 +210,6 @@ def hydra_like_attack(url, usernames=None, passwords=None,
     if not success:
         print("❌ No valid credentials found")
     return success
-
-# ── Download Helpers ──────────────────────────────────────────────────────────
 
 def download_file(url, folder):
     os.makedirs(folder, exist_ok=True)
@@ -257,8 +245,6 @@ def export_links_txt(links, folder):
         for link in sorted(links):
             f.write(link + "\n")
     print(f"📝 Links list → {path}")
-
-# ── Main Scan ────────────────────────────────────────────────────────────────
 
 def web_scan(start_url):
     parsed     = urlparse(start_url)
@@ -323,8 +309,6 @@ def web_scan(start_url):
         }
     }
 
-# ── Auto-Random Scan ──────────────────────────────────────────────────────────
-
 def auto_random_scan(max_attempts=100):
     headers = {"User-Agent": USER_AGENT}
 
@@ -350,8 +334,6 @@ def auto_random_scan(max_attempts=100):
         except:
             print("Failed")
     print(f"❌ No domain with data found after {max_attempts} tries.")
-
-# ── CLI Handlers ─────────────────────────────────────────────────────────────
 
 def _extract_url(raw):
     if isinstance(raw, str) and raw.startswith("http"):
