@@ -19,9 +19,9 @@ def download_all_media(url, platform):
             for chunk in r.iter_content(chunk_size=8192):
                 f.write(chunk)
 
-        return f"✅ Berhasil unduh: {path}"
+        return f"✅ Download complete: {path}"
     except Exception as e:
-        raise RuntimeError(f"Download gagal: {str(e)}")
+        raise RuntimeError(f"Download failed: {str(e)}")
 
 def generate_filename(url, platform):
     parsed = urlparse(url)
