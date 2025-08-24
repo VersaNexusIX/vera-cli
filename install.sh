@@ -11,7 +11,6 @@ pkg install python git -y
 echo "[*] Upgrading pip & build tools..."
 python3 -m pip install --upgrade pip setuptools wheel
 
-# Clone repo kalau belum ada
 if [ ! -d "vera-cli" ]; then
     echo "[*] Cloning VERA CLI repo..."
     git clone https://github.com/VersaNexusIX/vera-cli.git
@@ -20,19 +19,14 @@ fi
 cd vera-cli || exit
 termux-setup-storage
 
-cat > requirements.txt <<REQ
-beautifulsoup4
-pillow
-pyfiglet
-colorama
-requests
-yt-dlp
-lxml
-rich
-REQ
-
 echo "[*] Installing Python dependencies..."
-pip3 install -r requirements.txt
+pip3 install colorama
+pip3 install beautifulsoup4
+pip3 install yt-dlp
+pip3 install requests
+pip3 install lxml
+pip3 install rich
+pip3 install pillow
 
 echo "[*] Installation complete! Run with: python3 cli.py"
 EOF
