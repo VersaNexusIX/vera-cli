@@ -16,7 +16,6 @@ VERA CLI is a Python-based system designed for:
 
 - Media downloading (YouTube, TikTok, Pinterest)
 - Flexible prompt parsing
-- WhatsApp profile scanning
 - ASCII generation
 - Weather, quiz, anime, and persona handlers
 
@@ -36,7 +35,6 @@ Each module is built for stable input parsing and final output without ambiguity
 - ASCII banner generator (`utils/ascii.py`)
 - Prompt parser with auto-flatten logic (`utils/parse_prompt.py`)
 - Multi-format downloader (mp4, mp3, jpg)
-- WhatsApp profile scanner (`wa <number>`)
 - Quiz engine and weather handler
 - Persona tuning for bot identity
 
@@ -50,7 +48,6 @@ vera-cli/
 ├── handlers/
 │   ├── yt.py
 │   ├── tt.py
-│   ├── wa.py
 │   ├── weather.py
 │   ├── quiz.py
 │   └── ~~
@@ -62,35 +59,32 @@ vera-cli/
 │   └── help.txt
 ├── requirements.txt
 └── README.md
-```
+
 
 ---
 
-## 🛠️ Installation
+🛠️ Installation
 
-### Linux
-```bash
+Linux
+
 sudo apt update && sudo apt install python3 python3-pip git -y
-pip3 install requests colorama yt-dlp beautifulsoup4 pillow pyfiglet selenium
+pip3 install requests colorama yt-dlp beautifulsoup4 pillow pyfiglet
 git clone https://github.com/VersaNexusIX/vera-cli.git
 cd vera-cli
 python3 cli.py
-```
 
-### Termux
+Termux
 
-```bash
 pkg update && pkg upgrade -y
 pkg install python git -y
 python3 -m pip install --upgrade pip setuptools wheel
-pip3 install beautifulsoup4 pillow pyfiglet selenium colorama requests yt-dlp lxml rich
+pip3 install beautifulsoup4 pillow pyfiglet colorama requests yt-dlp lxml rich
 git clone https://github.com/VersaNexusIX/vera-cli.git
 termux-setup-storage
 cd vera-cli
 echo "beautifulsoup4
 pillow
 pyfiglet
-selenium
 colorama
 requests
 yt-dlp
@@ -98,33 +92,32 @@ lxml
 rich" > requirements.txt
 pip3 install -r requirements.txt
 python3 cli.py
-```
 
-### Run after Exit
-```bash
+Run after Exit
+
 cd vera-cli
 python3 cli.py
-```
+
 
 ---
-## Example command
-```bash
+
+Example command
+
 yt https://youtu.be/...      # Download YouTube video
 tt https://vm.tiktok.com/... # Download TikTok video
-wa 6281234567890             # Scan WhatsApp profile image
 ascii Hello World            # Generate ASCII art
 cuaca Jakarta                # Get weather info
 quiz                         # Start quiz engine
 help                         # Show command list
 exit                         # Exit CLI
-```
+
 
 ---
 
-## 👤 About the Developer
+👤 About the Developer
 
 Versa NexusIX (David) is an independent software developer and systems architect based in Central Java, Indonesia. With deep expertise in low-level architecture, emotional AI systems, and cross-platform automation, he builds tools that prioritize stability, precision, and modular design.
-David is only 14 years old!. 
+David is only 14 years old!.
 
 He specializes in:
 
@@ -134,12 +127,15 @@ CLI Design with branded ASCII output and flexible input parsing
 
 API Reverse Engineering and endpoint mapping for audit tools
 
-Cross-platform Bot Integration (Telegram, WhatsApp, SMS, Terminal)
+Cross-platform Bot Integration (Telegram, SMS, Terminal)
 
 Web Scanning & Forensics for SQL/XLSX/admin panel extraction
 
 UX Logic & Emotional Systems for human-centered automation
 
+
 David is also known for building VERA CLI, a modular command-line interface that integrates media parsing, bot communication, and emotional prompt handling. His work emphasizes clean code, final output logic, and universal compatibility across platforms.
 
 He actively shares certified learning resources in DevOps, C programming, and system design to support young developers and online communities. Every project is treated as a legacy artefact—documented, versioned, and built to endure.
+
+---
