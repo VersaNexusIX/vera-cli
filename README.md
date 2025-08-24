@@ -91,7 +91,6 @@ termux-setup-storage
 cd vera-cli
 echo "beautifulsoup4
 pillow
-pyfiglet
 colorama
 requests
 yt-dlp
