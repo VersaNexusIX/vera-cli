@@ -1,9 +1,8 @@
 from colorama import Fore, Style, init as colorama_init
 
 def show_ascii_banner():
-    colorama_init(autoreset=True)
+    colorama_init(autoreset=True
 
-    # ASCII utama (warna biru)
     print(Fore.BLUE + r"""
 ╔╗──╔╦═══╦═══╦═══╗
 ║╚╗╔╝║╔══╣╔═╗║╔═╗║
@@ -13,7 +12,6 @@ def show_ascii_banner():
 ──╚╝─╚═══╩╝╚═╩╝─╚╝
 """)
 
-    # Teks bawah (gradasi merah ke biru)
     text = "𝐕𝐄𝐑𝐀 - 𝐂𝐋𝐈 𝐀𝐒𝐒𝐈𝐒𝐓𝐀𝐍𝐓"
     gradient = [Fore.BLUE]
     steps = len(gradient)
