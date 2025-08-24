@@ -63,7 +63,7 @@ vera-cli/
 │   └── help.txt
 ├── requirements.txt
 └── README.md
-
+```
 
 ---
 
@@ -72,14 +72,17 @@ vera-cli/
 
 Linux
 
+```
 sudo apt update && sudo apt install python3 python3-pip git -y
 pip3 install requests colorama yt-dlp beautifulsoup4 pillow pyfiglet
 git clone https://github.com/VersaNexusIX/vera-cli.git
 cd vera-cli
 python3 cli.py
+```
 
 Termux
 
+```
 pkg update && pkg upgrade -y
 pkg install python git -y
 python3 -m pip install --upgrade pip setuptools wheel
@@ -97,18 +100,21 @@ lxml
 rich" > requirements.txt
 pip3 install -r requirements.txt
 python3 cli.py
+```
 
 Run after Exit
 
+```
 cd vera-cli
 python3 cli.py
-
+```
 
 ---
 
 
 Example command
 
+```
 yt https://youtu.be/...      # Download YouTube video
 tt https://vm.tiktok.com/... # Download TikTok video
 ascii Hello World            # Generate ASCII art
@@ -116,7 +122,7 @@ cuaca Jakarta                # Get weather info
 quiz                         # Start quiz engine
 help                         # Show command list
 exit                         # Exit CLI
-
+```
 
 ---
 
