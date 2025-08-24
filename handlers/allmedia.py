@@ -4,9 +4,8 @@ import time
 import requests
 from urllib.parse import urlparse
 from colorama import Fore, Style
-from config import ALLMEDIA  # Pastikan config.py sudah ada
+from config import ALLMEDIA
 
-# === Branding Banner ===
 def banner(msg, type='info'):
     prefix = {
         'info': Fore.BLUE + '[AM]',
@@ -15,7 +14,6 @@ def banner(msg, type='info'):
     }.get(type, Fore.WHITE + '[AM]')
     print(f"{prefix} {msg}{Style.RESET_ALL}")
 
-# === Ekstensi Detektor ===
 def get_extension(url):
     url = url.lower()
     if '.mp4' in url:
@@ -26,7 +24,6 @@ def get_extension(url):
         return '.png'
     return '.bin'
 
-# === Expand Redirect URL ===
 def expand_url(short_url):
     try:
         res = requests.get(short_url, allow_redirects=False)
@@ -36,7 +33,6 @@ def expand_url(short_url):
         pass
     return short_url
 
-# === Bersihin URL ===
 def clean_url(raw):
     try:
         parsed = urlparse(raw)
@@ -45,7 +41,6 @@ def clean_url(raw):
     except Exception:
         return raw
 
-# === Main Handler ===
 def download_allmedia(url):
     if not re.match(r'^https?://.+', url):
         banner("URL tidak valid.", "error")
@@ -59,9 +54,9 @@ def download_allmedia(url):
     cleaned = clean_url(expanded)
 
     if expanded != url:
-        banner(f"🔁 URL diperluas: {expanded}", "info")
+        banner(f"🔁 Expanded URL: {expanded}", "info")
     if cleaned != expanded:
-        banner(f"🧼 URL dibersihkan: {cleaned}", "info")
+        banner(f"🧼 cleaned URL : {cleaned}", "info")
 
     try:
         res = requests.get(ALLMEDIA["base"], headers={
@@ -73,21 +68,21 @@ def download_allmedia(url):
         media_list = data.get("media", [])
 
         if not isinstance(media_list, list) or not media_list:
-            banner("Tidak ada media ditemukan dari API.", "error")
+            banner("Cannot Found from API", "error")
             return
 
         timestamp = int(time.time())
 
         for i, media_url in enumerate(media_list):
             if not isinstance(media_url, str):
-                banner(f"⚠️ Media ke-{i} tidak valid. Lewat.", "error")
+                banner(f"⚠️ Media -{i} not a valid. skip.", "error")
                 continue
 
             ext = get_extension(media_url)
             file_name = f"am_{timestamp}_{i}{ext}"
             download_path = os.path.join("/storage/emulated/0/Download", file_name)
 
-            banner(f"📥 Mengunduh: {file_name}", "info")
+            banner(f"📥 installing: {file_name}", "info")
 
             try:
                 with requests.get(media_url, stream=True) as r:
@@ -95,21 +90,20 @@ def download_allmedia(url):
                     with open(download_path, 'wb') as f:
                         for chunk in r.iter_content(chunk_size=8192):
                             f.write(chunk)
-                banner(f"✅ Disimpan di: {download_path}", "success")
+                banner(f"✅ File save : {download_path}", "success")
             except Exception as e:
-                banner(f"❌ Gagal unduh media ke-{i}: {str(e)}", "error")
+                banner(f"❌ Failed move file to-{i}: {str(e)}", "error")
 
     except Exception as err:
         msg = getattr(err, 'response', None)
         if msg and hasattr(msg, 'text'):
-            banner(f"Gagal download: {msg.text}", "error")
+            banner(f"download Failed: {msg.text}", "error")
         else:
-            banner(f"Gagal download: {str(err)}", "error")
+            banner(f"download failed: {str(err)}", "error")
             
-            # === CLI Handler Wrapper ===
 def handle(args):
     if not args or not isinstance(args, list):
-        banner("Argumen kosong atau tidak valid.", "error")
+        banner("Args not found", "error")
         return
 
     url = args[0]
