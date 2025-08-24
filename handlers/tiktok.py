@@ -87,7 +87,7 @@ def prompt_format(url):
 
 # === Slide Downloader ===
 def download_slide_images(url):
-    print(Fore.CYAN + "VERA :  Mendeteksi gambar slide dari TikTok Photo Post..." + Style.RESET_ALL)
+    print(Fore.CYAN + "VERA :  detect Photo Post..." + Style.RESET_ALL)
     try:
         res = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
         html = res.text
