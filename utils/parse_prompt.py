@@ -4,7 +4,7 @@ known_commands = [
     "sp", 
     "vera",
     "yt", 
-    "cuaca",
+    "weather",
     "help", 
     "exit", 
     "pers", 
