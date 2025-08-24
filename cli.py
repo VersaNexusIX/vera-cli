@@ -38,7 +38,7 @@ commands = {
     "sp":           spotify,
     "yt":           yt,
     "am":           allmedia,
-    "cuaca":        cuaca, 
+    "weather":        cuaca, 
     "git":          gitclone,
     "quiz":         quiz,
     "ig":           ig,
