@@ -81,6 +81,9 @@ python3 cli.py
 
 ```bash
 pkg update && pkg upgrade -y
+```
+
+```bash
 pkg install python git -y
 pkg install python3 -y
 pip3 install beautifulsoup4 pillow pyfiglet selenium
