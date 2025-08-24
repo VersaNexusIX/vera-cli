@@ -88,7 +88,7 @@ pkg install python git -y
 pkg install python3 -y
 pip3 install beautifulsoup4 pillow pyfiglet selenium
 git clone https://github.com/VersaNexusIX/vera-cli.git
-pip install colorama request yt-dlp
+pip3 install colorama requests yt-dlp
 termux-setup-storage
 y
 cd vera-cli
