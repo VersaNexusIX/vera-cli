@@ -21,7 +21,6 @@ known_commands = [
     "tebak angka", 
     "webfile", 
     "webgrab", 
-    "wa", 
     "git_search", 
     "guest_number", 
 ]
