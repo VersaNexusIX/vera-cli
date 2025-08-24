@@ -16,11 +16,11 @@ def osint_email_trace(email):
             "User-Agent": "VERA-OSINT"
         }, timeout=5)
         if r.status_code == 200:
-            results.append(Fore.RED + "⚠️ Breach ditemukan di HaveIBeenPwned" + Style.RESET_ALL)
+            results.append(Fore.RED + "⚠️ found in Breach public" + Style.RESET_ALL)
         elif r.status_code == 404:
-            results.append(Fore.GREEN + "✅ Tidak ditemukan di breach publik" + Style.RESET_ALL)
+            results.append(Fore.GREEN + "✅ Not found in Breach public" + Style.RESET_ALL)
     except:
-        results.append(Fore.YELLOW + "⚠️ Gagal akses HaveIBeenPwned" + Style.RESET_ALL)
+        results.append(Fore.YELLOW + "⚠️ Failed to access" + Style.RESET_ALL)
 
     # Hunter.io
     try:
@@ -43,7 +43,7 @@ def osint_email_trace(email):
     try:
         r = requests.get(gravatar_url, timeout=5)
         if r.status_code == 200:
-            results.append(Fore.MAGENTA + "🧠 Email terhubung ke Gravatar profile" + Style.RESET_ALL)
+            results.append(Fore.MAGENTA + "🧠 Email connected to Gavatar" + Style.RESET_ALL)
     except:
         pass
 
