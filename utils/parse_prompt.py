@@ -23,7 +23,7 @@ known_commands = [
     "webgrab", 
     "wa", 
     "git_search", 
-    "tebak_angka", 
+    "guest_number", 
 ]
 
 def parse_prompt(input_str):
