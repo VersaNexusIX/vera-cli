@@ -5,7 +5,7 @@ from utils.vera_utils import move_to_public_and_scan, trigger_media_scan
 
 def handle(args):
     if not args:
-        return Fore.YELLOW + "VERA : ⚠️ Masukkan link Spotify track."
+        return Fore.YELLOW + "VERA : ⚠️ enter spotify link"
 
     spotify_url = args[0]
     visible = "--visible" in args
@@ -19,7 +19,7 @@ VERA : Pilih jenis instalasi:
 
     choice = input(Fore.MAGENTA + "USER : ").strip()
     if choice == "3":
-        return Fore.YELLOW + "VERA : ❌ Proses dibatalkan."
+        return Fore.YELLOW + "VERA : ❌ Process cancelled."
 
     download_dir = os.path.expanduser("~/Download/VERA_Spotify")
     os.makedirs(download_dir, exist_ok=True)
@@ -28,7 +28,7 @@ VERA : Pilih jenis instalasi:
         track_id = spotify_url.split("/track/")[1].split("?")[0]
         search_query = f"ytsearch1:spotify track {track_id}"
     except:
-        return Fore.RED + "VERA : ❌ Link Spotify tidak valid."
+        return Fore.RED + "VERA : ❌ not a valid link."
 
     if choice == "1":
         ydl_opts = {
@@ -51,7 +51,7 @@ VERA : Pilih jenis instalasi:
         }
         ext = "jpg"
     else:
-        return Fore.YELLOW + "VERA : ⚠️ Pilihan tidak valid."
+        return Fore.YELLOW + "VERA : ⚠️ Invalid option."
 
     try:
         with YoutubeDL(ydl_opts) as ydl:
@@ -61,6 +61,6 @@ VERA : Pilih jenis instalasi:
             trigger_media_scan(file_path)
             if visible:
                 move_to_public_and_scan(file_path, "Spotify")
-            return Fore.GREEN + f"VERA : ✅ \"{title}\" berhasil diunduh ke: {file_path}"
+            return Fore.GREEN + f"VERA : ✅ \"{title}\" Successfully downloaded to: {file_path}"
     except Exception as e:
-        return Fore.RED + f"VERA : ❌ Gagal unduh dari YouTube: {str(e)}"
+        return Fore.RED + f"VERA : ❌ Failed to download: {str(e)}"
