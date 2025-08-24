@@ -38,11 +38,11 @@ def move_to_public_and_scan(local_path):
             os.remove(target_path)
         os.rename(local_path, target_path)
         trigger_media_scan(target_path)
-        print(Fore.GREEN + f"VERA : ✅ File dipindah ke: {target_path}")
-        print("VERA : 📂 File sekarang bisa diakses dari File Manager dan Pemutar Musik." + Style.RESET_ALL)
+        print(Fore.GREEN + f"VERA : ✅ File moved to: {target_path}")
+        print("VERA : 📂 The file is now accessible." + Style.RESET_ALL)
         return target_path
     except Exception as e:
-        print(Fore.RED + f"VERA : ❌ Gagal pindah/scan: {e}" + Style.RESET_ALL)
+        print(Fore.RED + f"VERA : ❌ Failed to move/scan: {e}" + Style.RESET_ALL)
         return local_path
 
 # === Extract Path from Result String (optional)
