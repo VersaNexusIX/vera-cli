@@ -83,6 +83,8 @@ python3 cli.py
 
 ```
 pkg install git -y
+pkg install python -y
+pkg install python3 -y
 git clone https://github.com/VersaNexusIX/vera-cli.git
 cd vera-cli
 bash install.sh
