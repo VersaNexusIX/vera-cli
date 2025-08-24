@@ -67,10 +67,9 @@ vera-cli/
 
 ---
 
+## 🛠️ Installation
 
-##🛠️ Installation
-
-###Linux
+### Linux
 
 ```
 sudo apt update && sudo apt install python3 python3-pip git -y
@@ -80,7 +79,7 @@ cd vera-cli
 python3 cli.py
 ```
 
-###Termux
+### Termux
 
 ```
 pkg update && pkg upgrade -y
@@ -102,7 +101,7 @@ pip3 install -r requirements.txt
 python3 cli.py
 ```
 
-###Run after Exit
+### Run after Exit
 
 ```
 cd vera-cli
@@ -112,7 +111,7 @@ python3 cli.py
 ---
 
 
-##Example command
+## Example command
 
 ```
 yt https://youtu.be/...      # Download YouTube video
@@ -127,7 +126,7 @@ exit                         # Exit CLI
 ---
 
 
-##👤 About the Developer
+## 👤 About the Developer
 
 Versa NexusIX (David) is an independent software developer and systems architect based in Central Java, Indonesia. With deep expertise in low-level architecture, emotional AI systems, and cross-platform automation, he builds tools that prioritize stability, precision, and modular design.
 David is only 14 years old!.
