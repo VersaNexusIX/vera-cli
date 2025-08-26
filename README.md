@@ -69,16 +69,6 @@ vera-cli/
 
 ## 🛠️ Installation
 
-### Linux
-
-```
-sudo apt update && sudo apt install python3 python3-pip git -y
-pip3 install requests colorama yt-dlp beautifulsoup4 pillow pyfiglet
-git clone https://github.com/VersaNexusIX/vera-cli.git
-cd vera-cli
-python3 cli.py
-```
-
 ### Termux
 
 ```
