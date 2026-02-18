@@ -6,7 +6,7 @@
 <h2 align="center">VERA CLI I</h2>
 
 A modular command-line interface for automation, media parsing, and multi-platform bot integration.  
-Developed by Versa NexusIX (David) — solo developer and systems architect.
+Developed by Versa NexusIX — solo developer and systems architect.
 
 ---
 
