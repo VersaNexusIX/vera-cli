@@ -1,0 +1,53 @@
+  ╔══════════════════════════════════════════════════════════════╗
+  ║                    VERA CLI  —  Help Menu                    ║
+  ╚══════════════════════════════════════════════════════════════╝
+
+  📥  DOWNLOADERS
+  ───────────────────────────────────────────────────────────────
+  tt  <url>              TikTok — video / audio / slide
+  yt  <url>              YouTube — MP4 or MP3
+  sp  <spotify_url>      Spotify track — MP3 or cover art
+  am  <url>              AllMedia (Instagram / Facebook via API)
+  ig  <url>              Instagram — via yt-dlp
+  fb  <url>              Facebook — via yt-dlp
+  x   <url>              X / Twitter — via yt-dlp
+  pin <url>              Pinterest — video download
+
+  🔧  DEVELOPER
+  ───────────────────────────────────────────────────────────────
+  git <url>              Clone a Git repository
+  git_search <keyword>   Search GitHub repositories
+  webfile <url>          Scrape & download files from a webpage
+  webgrab <url>          Full web scanner + file grabber
+
+  🌐  INFO & OSINT
+  ───────────────────────────────────────────────────────────────
+  weather <city>         Current weather data
+  anime <title>          Anime search via MyAnimeList
+  osint-mail <email>     Email OSINT — Gravatar, Hunter, MX check
+  sysinfo                Show system info (OS, CPU, RAM, Disk)
+  ipinfo [ip]            IP address geolocation
+
+  🔐  ENCODE / CRYPTO
+  ───────────────────────────────────────────────────────────────
+  encode <method> <text> Encode text (base64 | url | hex | rot13)
+  decode <method> <text> Decode text (base64 | url | hex | rot13)
+  hash   <text>          Generate hash (default: SHA-256)
+    --algo md5|sha1|sha256|sha512|all
+
+  🎮  GAMES & FUN
+  ───────────────────────────────────────────────────────────────
+  quiz [local|online]    Trivia quiz game
+  guest_number           Guess the number 1–50
+  ascii <text>           Generate ASCII art
+
+  ⚙️   SYSTEM
+  ───────────────────────────────────────────────────────────────
+  setpersona [query]     View / test VERA bot persona
+  help / ?               Show this menu
+  exit / quit / q        Exit VERA CLI
+
+  💡  TIPS
+  ───────────────────────────────────────────────────────────────
+  Append --visible to any downloader to move file to public folder
+  Aliases: cuaca=weather, insta=ig, tiktok=tt, youtube=yt
